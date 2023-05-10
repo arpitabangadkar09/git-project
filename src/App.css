@@ -30,9 +30,9 @@ h1{
 }
 
 .data-val{
+           
            display: flex;
            justify-content: space-between;
-           width:60%;
-           padding: 0px 9px 0px 9px;
-           background-color: rgb(203,195,195);
-}
+           width: 100%;
+           background-color: rgb(250, 248, 248);
+       }

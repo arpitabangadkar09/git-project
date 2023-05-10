@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import AddIcon from '@mui/icons-material/Add';
 import { useState } from 'react';
+import Fields from './components/Fields';
 
 function App  ()  {
 
@@ -55,21 +56,23 @@ function App  ()  {
                             <h4> LastName </h4>
                             <h4> Remove  </h4>
                       </div>
-                      {
+                {
                     data.map((element, index) => {
                         return(
-                            <div key ={index} className='data-val'>
-                            <h4> {element.firstName} </h4>
-                            <h4> {element.lastName} </h4>
+                            <div key={index} className='data-val'>
+                            <h4> {element.firstname} </h4>
+                            <h4> {element.lastname} </h4>
                 <Stack>          
-                  <Button onClick={() => removeItem(index)} variant="contained" color="error">
+                  <Button onClick={removeItem} variant="contained" color="error">
                         Remove
                  </Button>
                 </Stack> 
                </div>
-                        )
-                    })
-                }
+            
+                     ) 
+                 }) 
+                } 
+                
                 </div>
               
             </div>
