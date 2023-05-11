@@ -11,12 +11,16 @@ function App  ()  {
 
     const [firstname, setfirstName] = useState('');
     const [lastname, setlastName] = useState('');
+    const [email, setemail] = useState('');
+    const [Domain, setDomain] = useState('');
     const [data, setData] = useState([]);
 
     const addData = () => {
-            setData([...data, {firstname, lastname}])
+            setData([...data, {firstname, lastname,email,Domain}])
             setfirstName('');
             setlastName('');
+            setemail('');
+            setDomain('');
 
     }
     
@@ -46,6 +50,22 @@ function App  ()  {
                          label="Last Name" 
                          variant="outlined" 
                     />
+                    
+                    <TextField 
+                         value={email} 
+                         onChange = {(event) => setemail(event.target.value) }
+                         id="outlined-basic" 
+                         label="Email" 
+                         variant="outlined" 
+                    />
+
+                    <TextField 
+                         value={Domain} 
+                         onChange = {(event) => setDomain(event.target.value) }
+                         id="outlined-basic" 
+                         label="Domain" 
+                         variant="outlined" 
+                    />
                     <Button onClick = {addData} color='success' variant="contained">
                         <AddIcon />
                     </Button>
@@ -54,6 +74,8 @@ function App  ()  {
                       <div className='data-val'>
                             <h4> FirstName </h4>
                             <h4> LastName </h4>
+                            <h4> email </h4>
+                            <h4> Domain </h4>
                             <h4> Remove  </h4>
                       </div>
                 {
@@ -62,6 +84,8 @@ function App  ()  {
                             <div key={index} className='data-val'>
                             <h4> {element.firstname} </h4>
                             <h4> {element.lastname} </h4>
+                            <h4> {element.email} </h4>
+                            <h4> {element.Domain} </h4>
                 <Stack>          
                   <Button onClick={removeItem} variant="contained" color="error">
                         Remove
