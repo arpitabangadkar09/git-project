@@ -88,7 +88,7 @@ function App  ()  {
                             <h4> {element.Domain} </h4>
                 <Stack>          
                   <Button onClick={removeItem} variant="contained" color="error">
-                        Remove
+                          Remove
                  </Button>
                 </Stack> 
                </div>
